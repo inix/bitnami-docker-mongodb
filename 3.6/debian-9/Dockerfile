@@ -1,4 +1,4 @@
-FROM bitnami/minideb-extras:stretch-r197
+FROM 10.18.1.230:80/bitnami/minideb-extras:stretch-r197-caih-r0
 LABEL maintainer "Bitnami <containers@bitnami.com>"
 
 ENV BITNAMI_PKG_CHMOD="-R g+rwX" \
@@ -6,7 +6,7 @@ ENV BITNAMI_PKG_CHMOD="-R g+rwX" \
 
 # Install required system packages and dependencies
 RUN install_packages libc6 libgcc1 libpcap0.8 libssl1.1
-RUN bitnami-pkg unpack mongodb-3.6.8-4 --checksum 876613c0047619c54b9d4ceff14fc612468c48aaeccb8197c7145fe425fbad24
+RUN bitnami-pkg unpack mongodb-3.6.3-2 --checksum d74dda329d1e832b89b424cdf7cb6ccc867b7401649822923b641dc4ab36b8b7
 RUN mkdir /docker-entrypoint-initdb.d
 
 COPY rootfs /
