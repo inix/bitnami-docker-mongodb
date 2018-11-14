@@ -1,4 +1,4 @@
-FROM 10.18.1.230:80/bitnami/minideb-extras:stretch-r197-caih-r0
+FROM testbeyond/minideb-extras:stretch-r197-caih-r0
 LABEL maintainer "Bitnami <containers@bitnami.com>"
 
 ENV BITNAMI_PKG_CHMOD="-R g+rwX" \
